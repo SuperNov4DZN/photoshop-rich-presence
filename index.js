@@ -4,7 +4,7 @@ var old_time = new Date();
 function update () {
     let windowTitle = winprocess.getActiveWindowName();
     var pid = winprocess.getProcessId("photoshop.exe");
-    if(windowTitle === "Adobe Photoshop CC 2020") {
+    if(windowTitle === "Adobe Photoshop CC 2018") {
         windowTitle = "IDLE";
     }
     else if(windowTitle.includes(".psd")) {
@@ -19,7 +19,7 @@ function update () {
     }
     var new_time = old_time;
     client.updatePresence({
-        details: 'CC 2020',
+        details: 'CC 2018',
         state: `Editing : ${windowTitle}`,
         startTimestamp : new_time,
         largeImageKey: 'photoshop_large',
